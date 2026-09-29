@@ -1,0 +1,47 @@
+.dashboard {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #f5f7fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.welcome {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #eef4ff;
+}
+
+.welcome h3 {
+  margin-top: 0;
+}

@@ -1,0 +1,33 @@
+<div class="facilities">
+
+  <h2>Facilities</h2>
+  <p>View and search registered facilities.</p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search facility..."
+      [(ngModel)]="searchText"
+    />
+  </div>
+
+  <div class="facility-list">
+
+    <div class="facility-card" *ngFor="let facility of filteredFacilities">
+
+      <h3>{{ facility.name }}</h3>
+
+      <p>
+        <strong>Location:</strong>
+        {{ facility.location }}
+      </p>
+
+      <p>
+        {{ facility.description }}
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

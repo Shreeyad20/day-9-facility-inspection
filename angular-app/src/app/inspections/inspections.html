@@ -1,0 +1,72 @@
+<div class="inspections">
+
+  <h2>New Facility Inspection</h2>
+  <p>Record a new inspection for a facility.</p>
+
+  <form (ngSubmit)="submitInspection()">
+
+    <label>Facility</label>
+    <select [(ngModel)]="inspection.facilityId" name="facilityId" required>
+      <option value="0">Select Facility</option>
+
+      <option
+        *ngFor="let facility of facilities"
+        [value]="facility.id">
+        {{ facility.name }}
+      </option>
+    </select>
+
+    <label>Inspection Date</label>
+    <input
+      type="date"
+      [(ngModel)]="inspection.inspectionDate"
+      name="inspectionDate"
+      required
+    />
+
+    <label>Cleanliness Score</label>
+    <input
+      type="number"
+      min="0"
+      max="100"
+      [(ngModel)]="inspection.cleanlinessScore"
+      name="cleanlinessScore"
+      required
+    />
+
+    <label>Waste Level</label>
+    <select
+      [(ngModel)]="inspection.wasteLevel"
+      name="wasteLevel"
+      required>
+      <option value="">Select Waste Level</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+
+    <label>Water Availability</label>
+    <select
+      [(ngModel)]="inspection.waterAvailability"
+      name="waterAvailability"
+      required>
+      <option value="">Select Water Availability</option>
+      <option value="Available">Available</option>
+      <option value="Not Available">Not Available</option>
+    </select>
+
+    <label>Remarks</label>
+    <textarea
+      [(ngModel)]="inspection.remarks"
+      name="remarks"
+      rows="4"
+      placeholder="Enter inspection remarks">
+    </textarea>
+
+    <button type="submit">
+      Submit Inspection
+    </button>
+
+  </form>
+
+</div>

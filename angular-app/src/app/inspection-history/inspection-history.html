@@ -1,0 +1,57 @@
+<div class="history">
+
+  <h2>Inspection History</h2>
+  <p>View all previously recorded facility inspections.</p>
+
+  <div class="table-container">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Facility</th>
+          <th>Date</th>
+          <th>Cleanliness</th>
+          <th>Waste Level</th>
+          <th>Water</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let inspection of inspections">
+
+          <td>
+            {{ inspection.facility?.name || 'Facility ' + inspection.facilityId }}
+          </td>
+
+          <td>
+            {{ inspection.inspectionDate }}
+          </td>
+
+          <td>
+            {{ inspection.cleanlinessScore }}%
+          </td>
+
+          <td>
+            {{ inspection.wasteLevel }}
+          </td>
+
+          <td>
+            {{ inspection.waterAvailability }}
+          </td>
+
+          <td>
+            {{ inspection.remarks }}
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
